@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Modal = ({ modalIsOpen, handleModal, selectedImg }) => {
 	return (
 		<>
-			<Dialog open={modalIsOpen} fullWidth={'fullWidth'} maxWidth={'md'}>
+			<Dialog open={modalIsOpen} fullWidth={true} maxWidth={'md'}>
 				<IconButton
 					onClick={handleModal}
 					aria-label='close'
@@ -34,6 +34,6 @@ const Modal = ({ modalIsOpen, handleModal, selectedImg }) => {
 Modal.propTypes = {
 	modalIsOpen: PropTypes.bool.isRequired,
 	handleModal: PropTypes.func,
-	selectedImg: PropTypes.object,
+	selectedImg: PropTypes.any,
 };
 export default Modal;
